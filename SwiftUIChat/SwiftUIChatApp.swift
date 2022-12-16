@@ -7,17 +7,10 @@
 
 import SwiftUI
 import FirebaseCore
-
-//class AppDelegate: NSObject, UIApplicationDelegate {
-//  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-//      FirebaseApp.configure()
-//    return true
-//  }
-//}
+import FirebaseAuth
 
 @main
 struct SwiftUIChatApp: App {
-//    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
 
     init() {
         FirebaseApp.configure()
@@ -25,7 +18,16 @@ struct SwiftUIChatApp: App {
 
     var body: some Scene {
         WindowGroup {
-            LoginView()
+            if let user = Auth.auth().currentUser {
+                // TODO: 如果沒有上傳照片，跳轉到 ProfilePhotoSelectorView
+                if user.photoURL != nil {
+                    MainTabView()
+                } else {
+                    ProfilePhotoSelectorView()
+                }
+            } else {
+                LoginView(viewModel: AuthViewModel())
+            }
         }
     }
 }

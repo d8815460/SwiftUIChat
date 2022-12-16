@@ -98,6 +98,15 @@
 		23ACE1A0294C35AB00B38B2C /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = 23ACE19F294C35AB00B38B2C /* FirebaseFunctions */; };
 		23ACE1A2294C35AB00B38B2C /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 23ACE1A1294C35AB00B38B2C /* FirebaseMessaging */; };
 		23ACE1A4294C35AB00B38B2C /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 23ACE1A3294C35AB00B38B2C /* FirebaseStorage */; };
+		23ACE1A6294C37AF00B38B2C /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ACE1A5294C37AF00B38B2C /* AuthViewModel.swift */; };
+		23ACE1A7294C37AF00B38B2C /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ACE1A5294C37AF00B38B2C /* AuthViewModel.swift */; };
+		23ACE1A8294C37AF00B38B2C /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ACE1A5294C37AF00B38B2C /* AuthViewModel.swift */; };
+		23ACE1AA294C3CFB00B38B2C /* ProfilePhotoSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ACE1A9294C3CFB00B38B2C /* ProfilePhotoSelectorView.swift */; };
+		23ACE1AB294C3CFB00B38B2C /* ProfilePhotoSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ACE1A9294C3CFB00B38B2C /* ProfilePhotoSelectorView.swift */; };
+		23ACE1AC294C3CFB00B38B2C /* ProfilePhotoSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ACE1A9294C3CFB00B38B2C /* ProfilePhotoSelectorView.swift */; };
+		23ACE1AE294C486E00B38B2C /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ACE1AD294C486E00B38B2C /* ImageUploader.swift */; };
+		23ACE1AF294C486E00B38B2C /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ACE1AD294C486E00B38B2C /* ImageUploader.swift */; };
+		23ACE1B0294C486E00B38B2C /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ACE1AD294C486E00B38B2C /* ImageUploader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -154,6 +163,9 @@
 		23ACE18C294C2BC600B38B2C /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		23ACE190294C2C4000B38B2C /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 		23ACE194294C34AF00B38B2C /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		23ACE1A5294C37AF00B38B2C /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		23ACE1A9294C3CFB00B38B2C /* ProfilePhotoSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhotoSelectorView.swift; sourceTree = "<group>"; };
+		23ACE1AD294C486E00B38B2C /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -276,6 +288,7 @@
 				23ACE158294B7DD100B38B2C /* SettingsCellViewModel.swift */,
 				23ACE164294B828000B38B2C /* StatusViewModel.swift */,
 				23ACE190294C2C4000B38B2C /* ChatViewModel.swift */,
+				23ACE1A5294C37AF00B38B2C /* AuthViewModel.swift */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -283,6 +296,7 @@
 		23ACE118294B6D2700B38B2C /* API */ = {
 			isa = PBXGroup;
 			children = (
+				23ACE1AD294C486E00B38B2C /* ImageUploader.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -303,6 +317,7 @@
 			children = (
 				23ACE11B294B6D8C00B38B2C /* LoginView.swift */,
 				23ACE11F294B6D9D00B38B2C /* RegistrationView.swift */,
+				23ACE1A9294C3CFB00B38B2C /* ProfilePhotoSelectorView.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -518,13 +533,16 @@
 				23ACE185294C1D8B00B38B2C /* MessageView.swift in Sources */,
 				23ACE16D294C078600B38B2C /* ConversationCell.swift in Sources */,
 				23ACE14D294B77A800B38B2C /* ChannelsView.swift in Sources */,
+				23ACE1AE294C486E00B38B2C /* ImageUploader.swift in Sources */,
 				23ACE151294B7B3B00B38B2C /* SettingsHeaderView.swift in Sources */,
 				23ACE022294B696A00B38B2C /* ContentView.swift in Sources */,
 				23ACE179294C18A200B38B2C /* SearchBar.swift in Sources */,
+				23ACE1AA294C3CFB00B38B2C /* ProfilePhotoSelectorView.swift in Sources */,
 				23ACE189294C275500B38B2C /* CustomInputView.swift in Sources */,
 				23ACE145294B777200B38B2C /* ConversationsView.swift in Sources */,
 				23ACE020294B696A00B38B2C /* SwiftUIChatApp.swift in Sources */,
 				23ACE149294B779B00B38B2C /* SettingsView.swift in Sources */,
+				23ACE1A6294C37AF00B38B2C /* AuthViewModel.swift in Sources */,
 				23ACE134294B771E00B38B2C /* ChatView.swift in Sources */,
 				23ACE120294B6D9D00B38B2C /* RegistrationView.swift in Sources */,
 				23ACE12D294B75C200B38B2C /* MainTabView.swift in Sources */,
@@ -551,7 +569,9 @@
 				23ACE129294B743C00B38B2C /* CustomTextField.swift in Sources */,
 				23ACE15A294B7DD100B38B2C /* SettingsCellViewModel.swift in Sources */,
 				23ACE17E294C1B4300B38B2C /* Extensions.swift in Sources */,
+				23ACE1AB294C3CFB00B38B2C /* ProfilePhotoSelectorView.swift in Sources */,
 				23ACE18A294C275500B38B2C /* CustomInputView.swift in Sources */,
+				23ACE1A7294C37AF00B38B2C /* AuthViewModel.swift in Sources */,
 				23ACE135294B771E00B38B2C /* ChatView.swift in Sources */,
 				23ACE182294C1C9000B38B2C /* ChatBubble.swift in Sources */,
 				23ACE12E294B75C200B38B2C /* MainTabView.swift in Sources */,
@@ -561,6 +581,7 @@
 				23ACE186294C1D8B00B38B2C /* MessageView.swift in Sources */,
 				23ACE15E294B813000B38B2C /* EditProfileView.swift in Sources */,
 				23ACE156294B7C7C00B38B2C /* SettingsCell.swift in Sources */,
+				23ACE1AF294C486E00B38B2C /* ImageUploader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -585,13 +606,16 @@
 				23ACE187294C1D8B00B38B2C /* MessageView.swift in Sources */,
 				23ACE16F294C078600B38B2C /* ConversationCell.swift in Sources */,
 				23ACE14F294B77A800B38B2C /* ChannelsView.swift in Sources */,
+				23ACE1B0294C486E00B38B2C /* ImageUploader.swift in Sources */,
 				23ACE153294B7B3B00B38B2C /* SettingsHeaderView.swift in Sources */,
 				23ACE03D294B696B00B38B2C /* SwiftUIChatUITestsLaunchTests.swift in Sources */,
 				23ACE17B294C18A200B38B2C /* SearchBar.swift in Sources */,
+				23ACE1AC294C3CFB00B38B2C /* ProfilePhotoSelectorView.swift in Sources */,
 				23ACE18B294C275500B38B2C /* CustomInputView.swift in Sources */,
 				23ACE147294B777200B38B2C /* ConversationsView.swift in Sources */,
 				23ACE03B294B696B00B38B2C /* SwiftUIChatUITests.swift in Sources */,
 				23ACE14B294B779B00B38B2C /* SettingsView.swift in Sources */,
+				23ACE1A8294C37AF00B38B2C /* AuthViewModel.swift in Sources */,
 				23ACE136294B771E00B38B2C /* ChatView.swift in Sources */,
 				23ACE122294B6D9D00B38B2C /* RegistrationView.swift in Sources */,
 				23ACE12F294B75C200B38B2C /* MainTabView.swift in Sources */,

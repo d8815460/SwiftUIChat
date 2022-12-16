@@ -13,15 +13,15 @@ struct RegistrationView: View {
     @State private var fullname = ""
     @State private var username = ""
     @Environment(\.presentationMode) var mode
-//    @EnvironmentObject var viewModel: AuthViewModel
+    @ObservedObject var viewModel: AuthViewModel
     
     var body: some View {
         VStack {
             
-//            NavigationLink(
-//                destination: ProfilePhotoSelectorView(),
-//                isActive: $viewModel.didAuthenticateUser,
-//                label: { })
+            NavigationLink(
+                destination: ProfilePhotoSelectorView(),
+                isActive: $viewModel.didAuthenticateUser,
+                label: { })
             
             VStack(alignment: .leading, spacing: 12) {
                 HStack { Spacer() }
@@ -61,8 +61,7 @@ struct RegistrationView: View {
             .padding(.leading)
             
             Button(action: {
-//                viewModel.register(withEmail: email, password: password,
-//                                   fullname: fullname, username: username)
+                viewModel.register(withEmail: email, password: password, fullname: fullname, username: username)
             }, label: {
                 Text("Sign Up")
                     .font(.headline)
@@ -94,6 +93,6 @@ struct RegistrationView: View {
 
 struct RegistrationView_Previews: PreviewProvider {
     static var previews: some View {
-        RegistrationView()
+        RegistrationView(viewModel: AuthViewModel())
     }
 }
