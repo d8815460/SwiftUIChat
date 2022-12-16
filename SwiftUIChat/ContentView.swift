@@ -6,16 +6,22 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct ContentView: View {
+    @EnvironmentObject var viewModel: AuthViewModel
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        if viewModel.currentUser != nil  {
+            // TODO: 如果沒有上傳照片，跳轉到 ProfilePhotoSelectorView
+            if viewModel.currentUser?.photoURL != nil {
+                MainTabView()
+            } else {
+                ProfilePhotoSelectorView()
+            }
+        } else {
+            LoginView()
         }
-        .padding()
     }
 }
 

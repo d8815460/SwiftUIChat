@@ -12,9 +12,24 @@ class AuthViewModel: NSObject, ObservableObject {
 
     @Published var didAuthenticateUser = false
     @Published var didUploadPhoto = false
+    @Published var currentUser: FirebaseAuth.User?
 
-    func login() {
-        
+    static let shared = AuthViewModel()
+
+    override init() {
+        currentUser = Auth.auth().currentUser
+    }
+
+    func login(withEmail email: String, password: String) {
+        Auth.auth().signIn(withEmail: email, password: password) { result, error in
+            if let error = error {
+                print("DEBUG: Failed to sign in with error: \(error.localizedDescription)")
+                return
+            }
+
+            guard let user = result?.user else { return }
+            self.currentUser = user
+        }
     }
 
     func register(withEmail email: String, password: String, fullname: String, username: String) {
@@ -24,26 +39,16 @@ class AuthViewModel: NSObject, ObservableObject {
                 return
             }
 
-            guard
-                let user = result?.user
-            else { return }
+            guard let user = result?.user else { return }
 
             let data: [String: Any] = ["email": email,
                                        "username": username,
                                        "fullname": fullname]
 
             print("DEBUG: Succesfully register user in firestore..")
-            let changeRequest = user.createProfileChangeRequest()
-            changeRequest.displayName = fullname
-            changeRequest.commitChanges { error in
-                if let error = error {
-                    print("DEBUG: Failed to upload fullname on Auth user with error: \(error.localizedDescription)")
-                    return
-                }
-                Firestore.firestore().collection("users").document(user.uid).setData(data) { _ in
-                    print("DEBUG: Succesfully updated user info in firestore..")
-                    self.didAuthenticateUser = true
-                }
+            Firestore.firestore().collection("users").document(user.uid).setData(data) { _ in
+                print("DEBUG: Succesfully updated user info in firestore..")
+                self.didAuthenticateUser = true
             }
         }
     }
@@ -52,10 +57,10 @@ class AuthViewModel: NSObject, ObservableObject {
         print("DEBUG: upload profile image from view model")
         ImageUploader.uploadImage(image: image) { imageUrl in
             guard
-                let user = Auth.auth().currentUser
+                let currentUser = Auth.auth().currentUser
             else { return }
             print("DEBUG: upload profile image to firestore")
-            let changeRequest = user.createProfileChangeRequest()
+            let changeRequest = currentUser.createProfileChangeRequest()
             changeRequest.photoURL = URL(string: imageUrl)
             changeRequest.commitChanges { error in
                 if let error = error {
@@ -63,8 +68,12 @@ class AuthViewModel: NSObject, ObservableObject {
                     return
                 }
                 print("DEBUG: Succesfully updated photoURL..")
-                Firestore.firestore().collection("users").document(user.uid).updateData(["profileImageUrl": imageUrl]) { _ in
-                    print("DEBUG: Succesfully updated user data...")
+                Firestore.firestore().collection("users").document(currentUser.uid).updateData(["profileImageUrl": imageUrl]) { error in
+                    if let error = error {
+                        print("DEBUG: Failed to upload profileImageUrl with error: \(error.localizedDescription)")
+                        return
+                    }
+                    print("DEBUG: Succesfully updated user profileImageUrl...")
                     self.didUploadPhoto = true
                 }
             }
@@ -72,7 +81,8 @@ class AuthViewModel: NSObject, ObservableObject {
     }
 
     func signout() {
-        
+        self.currentUser = nil
+        try? Auth.auth().signOut()
     }
 
 }

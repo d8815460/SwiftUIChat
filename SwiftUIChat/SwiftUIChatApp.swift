@@ -18,16 +18,7 @@ struct SwiftUIChatApp: App {
 
     var body: some Scene {
         WindowGroup {
-            if let user = Auth.auth().currentUser {
-                // TODO: 如果沒有上傳照片，跳轉到 ProfilePhotoSelectorView
-                if user.photoURL != nil {
-                    MainTabView()
-                } else {
-                    ProfilePhotoSelectorView()
-                }
-            } else {
-                LoginView(viewModel: AuthViewModel())
-            }
+            ContentView().environmentObject(AuthViewModel.shared)
         }
     }
 }

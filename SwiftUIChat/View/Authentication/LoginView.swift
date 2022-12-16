@@ -11,7 +11,7 @@ struct LoginView: View {
 
     @State private var email = ""
     @State private var password = ""
-    @ObservedObject var viewModel: AuthViewModel
+    @EnvironmentObject var viewModel: AuthViewModel
 
     var body: some View {
         NavigationView {
@@ -57,7 +57,7 @@ struct LoginView: View {
                 }
                 
                 Button(action: {
-                    viewModel.login()
+                    viewModel.login(withEmail: email, password: password)
                 }, label: {
                     Text("Sign In")
                         .font(.headline)
@@ -72,7 +72,7 @@ struct LoginView: View {
                 Spacer()
                 
                 NavigationLink(
-                    destination: RegistrationView(viewModel: viewModel)
+                    destination: RegistrationView()
                         .navigationBarBackButtonHidden(true),
                     label: {
                         HStack {
@@ -91,6 +91,6 @@ struct LoginView: View {
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView(viewModel: AuthViewModel())
+        LoginView()
     }
 }
