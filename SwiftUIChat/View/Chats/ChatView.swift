@@ -27,7 +27,6 @@ struct ChatView: View {
         }
         .navigationTitle("venom")
         .navigationBarTitleDisplayMode(.inline)
-        .padding(.vertical)
 
     }
 
