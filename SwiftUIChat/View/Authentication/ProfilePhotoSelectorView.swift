@@ -72,8 +72,9 @@ struct ProfilePhotoSelectorView: View {
     }
 }
 
-struct ProfilePhotoSelectorView_Previews: PreviewProvider {
-    static var previews: some View {
-        ProfilePhotoSelectorView()
-    }
-}
+// Preview missing environment of type: AuthViewModel. To resolve this add .environmentObject(AuthViewModel(...)) to the appropriate preview.
+//struct ProfilePhotoSelectorView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ProfilePhotoSelectorView()
+//    }
+//}
