@@ -137,6 +137,7 @@
 		23ACE1B3294D72B900B38B2C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ACE1B1294D72B900B38B2C /* User.swift */; };
 		23ACE1B4294D72B900B38B2C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ACE1B1294D72B900B38B2C /* User.swift */; };
 		23BF88BD294DC804008E1AFF /* ConversationCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BF88BC294DC804008E1AFF /* ConversationCellViewModel.swift */; };
+		23BF88C2294DD78B008E1AFF /* LivePricesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BF88C1294DD78B008E1AFF /* LivePricesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -202,6 +203,7 @@
 		23ACE1AD294C486E00B38B2C /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
 		23ACE1B1294D72B900B38B2C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		23BF88BC294DC804008E1AFF /* ConversationCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationCellViewModel.swift; sourceTree = "<group>"; };
+		23BF88C1294DD78B008E1AFF /* LivePricesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivePricesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -335,6 +337,7 @@
 				23ACE132294B770600B38B2C /* Chats */,
 				23ACE131294B76FC00B38B2C /* Settings */,
 				23ACE130294B76F200B38B2C /* Channels */,
+				23BF88BE294DD75A008E1AFF /* LivePrices */,
 				23ACE12B294B75A200B38B2C /* Main */,
 				23ACE11A294B6D4F00B38B2C /* Authentication */,
 			);
@@ -434,6 +437,14 @@
 				23ACE174294C07C900B38B2C /* UserCell.swift */,
 			);
 			path = Conversations;
+			sourceTree = "<group>";
+		};
+		23BF88BE294DD75A008E1AFF /* LivePrices */ = {
+			isa = PBXGroup;
+			children = (
+				23BF88C1294DD78B008E1AFF /* LivePricesView.swift */,
+			);
+			path = LivePrices;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -637,6 +648,7 @@
 				23ACE149294B779B00B38B2C /* SettingsView.swift in Sources */,
 				23ACE1A6294C37AF00B38B2C /* AuthViewModel.swift in Sources */,
 				23ACE134294B771E00B38B2C /* ChatView.swift in Sources */,
+				23BF88C2294DD78B008E1AFF /* LivePricesView.swift in Sources */,
 				23ACE120294B6D9D00B38B2C /* RegistrationView.swift in Sources */,
 				23ACE12D294B75C200B38B2C /* MainTabView.swift in Sources */,
 			);

@@ -26,7 +26,7 @@ struct MainTabView: View {
                         .onTapGesture {
                             selectedIndex = 1
                         }
-                        .tabItem { Image(systemName: "bubble.left.and.bubble.right") }
+                        .tabItem { Image(systemName: "bitcoinsign.circle.fill") }
                         .tag(1)
 
                     SettingsView(user: user)
@@ -46,7 +46,7 @@ struct MainTabView: View {
     var tabTitle: String {
         switch selectedIndex {
         case 0: return "Chats"
-        case 1: return "Channels"
+        case 1: return "Live Prices"
         case 2: return "Settings"
         default: return ""
         }
