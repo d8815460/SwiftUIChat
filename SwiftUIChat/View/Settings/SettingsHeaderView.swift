@@ -18,12 +18,21 @@ struct SettingsHeaderView: View {
 
     var body: some View {
         HStack {
-            KFImage(URL(string: user.profileImageUrl ?? "venom-7"))
-                .resizable()
-                .scaledToFill()
-                .frame(width: 64, height: 64)
-                .clipShape(Circle())
-                .padding(.leading)
+            if let photoURL = user.profileImageUrl {
+                KFImage(URL(string: photoURL))
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 64, height: 64)
+                    .clipShape(Circle())
+                    .padding(.leading)
+            } else {
+                Image("venom-7")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 64, height: 64)
+                    .clipShape(Circle())
+                    .padding(.leading)
+            }
 
             VStack(alignment: .leading, spacing: 4) {
                 Text(user.fullname)
@@ -39,5 +48,12 @@ struct SettingsHeaderView: View {
         }
         .frame(height: 90)
         .background(Color.white)
+    }
+}
+
+struct SettingsHeaderView_Previews: PreviewProvider {
+    static var previews: some View {
+        let user = MOCK_USER
+        SettingsHeaderView(user: user)
     }
 }

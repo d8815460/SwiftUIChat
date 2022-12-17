@@ -39,3 +39,10 @@ struct SettingsCell: View {
         .background(Color.white)
     }
 }
+
+struct SettingsCell_Previews: PreviewProvider {
+    static var previews: some View {
+        let viewModel = SettingsCellViewModel(rawValue: 1)
+        SettingsCell(viewModel: viewModel!)
+    }
+}

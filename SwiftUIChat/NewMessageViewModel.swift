@@ -28,7 +28,7 @@ class NewMessageViewModel: ObservableObject {
 //                self.users.append(user)
 //            }
 
-            self.users = documents.compactMap({ try? $0.data(as: User.self) })
+            self.users = documents.compactMap({ try? $0.data(as: User.self) }).filter({ $0.id != Auth.auth().currentUser?.uid })
             print("DEBUG: Users: \(self.users)")
         }
     }

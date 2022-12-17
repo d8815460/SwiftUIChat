@@ -37,6 +37,7 @@
 		231029DE294D7C7200A273CD /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 231029DD294D7C7200A273CD /* Kingfisher */; };
 		231029E0294D7EE100A273CD /* NewMessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231029DF294D7EE100A273CD /* NewMessageViewModel.swift */; };
 		231029E2294D7F4600A273CD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231029E1294D7F4600A273CD /* Constants.swift */; };
+		231029E4294D9E5100A273CD /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231029E3294D9E5100A273CD /* MessageViewModel.swift */; };
 		23ACE020294B696A00B38B2C /* SwiftUIChatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ACE01F294B696A00B38B2C /* SwiftUIChatApp.swift */; };
 		23ACE022294B696A00B38B2C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ACE021294B696A00B38B2C /* ContentView.swift */; };
 		23ACE024294B696B00B38B2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23ACE023294B696B00B38B2C /* Assets.xcassets */; };
@@ -156,6 +157,7 @@
 /* Begin PBXFileReference section */
 		231029DF294D7EE100A273CD /* NewMessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessageViewModel.swift; sourceTree = "<group>"; };
 		231029E1294D7F4600A273CD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		231029E3294D9E5100A273CD /* MessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
 		23ACE01C294B696A00B38B2C /* SwiftUIChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23ACE01F294B696A00B38B2C /* SwiftUIChatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIChatApp.swift; sourceTree = "<group>"; };
 		23ACE021294B696A00B38B2C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -343,6 +345,7 @@
 				23ACE190294C2C4000B38B2C /* ChatViewModel.swift */,
 				23ACE1A5294C37AF00B38B2C /* AuthViewModel.swift */,
 				231029DF294D7EE100A273CD /* NewMessageViewModel.swift */,
+				231029E3294D9E5100A273CD /* MessageViewModel.swift */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -620,6 +623,7 @@
 				231029E2294D7F4600A273CD /* Constants.swift in Sources */,
 				23ACE1AA294C3CFB00B38B2C /* ProfilePhotoSelectorView.swift in Sources */,
 				23ACE189294C275500B38B2C /* CustomInputView.swift in Sources */,
+				231029E4294D9E5100A273CD /* MessageViewModel.swift in Sources */,
 				23ACE145294B777200B38B2C /* ConversationsView.swift in Sources */,
 				23ACE020294B696A00B38B2C /* SwiftUIChatApp.swift in Sources */,
 				23ACE149294B779B00B38B2C /* SettingsView.swift in Sources */,
