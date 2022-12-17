@@ -12,12 +12,15 @@ class AuthViewModel: NSObject, ObservableObject {
 
     @Published var didAuthenticateUser = false
     @Published var didUploadPhoto = false
-    @Published var currentUser: FirebaseAuth.User?
+    @Published var userSession: FirebaseAuth.User?
+    @Published var currentUser: User?
 
     static let shared = AuthViewModel()
 
     override init() {
-        currentUser = Auth.auth().currentUser
+        super.init()
+        userSession = Auth.auth().currentUser
+        fetchUser()
     }
 
     func login(withEmail email: String, password: String) {
@@ -28,7 +31,8 @@ class AuthViewModel: NSObject, ObservableObject {
             }
 
             guard let user = result?.user else { return }
-            self.currentUser = user
+            self.userSession = user
+            self.fetchUser()
         }
     }
 
@@ -46,7 +50,7 @@ class AuthViewModel: NSObject, ObservableObject {
                                        "fullname": fullname]
 
             print("DEBUG: Succesfully register user in firestore..")
-            Firestore.firestore().collection("users").document(user.uid).setData(data) { _ in
+            COLLECTION_USERS.document(user.uid).setData(data) { _ in
                 print("DEBUG: Succesfully updated user info in firestore..")
                 self.didAuthenticateUser = true
             }
@@ -68,7 +72,7 @@ class AuthViewModel: NSObject, ObservableObject {
                     return
                 }
                 print("DEBUG: Succesfully updated photoURL..")
-                Firestore.firestore().collection("users").document(currentUser.uid).updateData(["profileImageUrl": imageUrl]) { error in
+                COLLECTION_USERS.document(currentUser.uid).updateData(["profileImageUrl": imageUrl]) { error in
                     if let error = error {
                         print("DEBUG: Failed to upload profileImageUrl with error: \(error.localizedDescription)")
                         return
@@ -81,8 +85,22 @@ class AuthViewModel: NSObject, ObservableObject {
     }
 
     func signout() {
+        self.userSession = nil
         self.currentUser = nil
         try? Auth.auth().signOut()
     }
 
+    func fetchUser() {
+        guard let uid = userSession?.uid else { return }
+
+        COLLECTION_USERS.document(uid).getDocument { snapshot, error in
+            if let error = error {
+                print("DEBUG: Failed to get Auth user with error: \(error.localizedDescription)")
+                return
+            }
+            guard let user = try? snapshot?.data(as: User.self) else { return }
+            print("get user data: \(user)")
+            self.currentUser = user
+        }
+    }
 }

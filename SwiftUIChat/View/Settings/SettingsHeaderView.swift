@@ -6,20 +6,30 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct SettingsHeaderView: View {
+
+    private let user: User
+
+    init(user: User) {
+        self.user = user
+    }
+
     var body: some View {
         HStack {
-            Image("venom-7")
+            KFImage(URL(string: user.profileImageUrl ?? "venom-7"))
                 .resizable()
-                .scaledToFit()
+                .scaledToFill()
                 .frame(width: 64, height: 64)
                 .clipShape(Circle())
                 .padding(.leading)
-        
+
             VStack(alignment: .leading, spacing: 4) {
-                Text("Eddie Brock")
+                Text(user.fullname)
                     .font(.system(size: 18))
+                    .foregroundColor(.black)
+
                 Text("Available")
                     .foregroundColor(.gray)
                     .font(.system(size: 14))
@@ -27,13 +37,7 @@ struct SettingsHeaderView: View {
 
             Spacer()
         }
-        .frame(height: 80)
+        .frame(height: 90)
         .background(Color.white)
-    }
-}
-
-struct SettingsHeaderView_Previews: PreviewProvider {
-    static var previews: some View {
-        SettingsHeaderView()
     }
 }

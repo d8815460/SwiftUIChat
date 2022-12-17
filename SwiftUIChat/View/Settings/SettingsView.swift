@@ -6,14 +6,15 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct SettingsView: View {
 
-//    private let user: User
-//    
-//    init(user: User) {
-//        self.user = user
-//    }
+    private let user: User
+
+    init(user: User) {
+        self.user = user
+    }
 
     var body: some View {
         ZStack {
@@ -23,7 +24,7 @@ struct SettingsView: View {
             VStack(spacing: 32) {
                 NavigationLink(
                     destination: EditProfileView(),
-                    label: { SettingsHeaderView() })
+                    label: { SettingsHeaderView(user: user) })
                 
                 VStack(spacing: 1) {
                     ForEach(SettingsCellViewModel.allCases, id: \.self) { viewModel in
@@ -44,11 +45,5 @@ struct SettingsView: View {
                 Spacer()
             }
         }
-    }
-}
-
-struct SettingsView_Previews: PreviewProvider {
-    static var previews: some View {
-        SettingsView()
     }
 }

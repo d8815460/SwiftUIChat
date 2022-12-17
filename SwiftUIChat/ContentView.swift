@@ -12,9 +12,9 @@ struct ContentView: View {
     @EnvironmentObject var viewModel: AuthViewModel
 
     var body: some View {
-        if viewModel.currentUser != nil  {
+        if viewModel.userSession != nil  {
             // TODO: 如果沒有上傳照片，跳轉到 ProfilePhotoSelectorView
-            if viewModel.currentUser?.photoURL != nil {
+            if viewModel.userSession?.photoURL != nil {
                 MainTabView()
             } else {
                 ProfilePhotoSelectorView()

@@ -12,7 +12,7 @@ struct ConversationCell: View {
     
     var body: some View {
 //        if let user = viewModel.message.user {
-            NavigationLink(destination: ChatView()) {
+        NavigationLink(destination: ChatView(user: MOCK_USER)) {
                 VStack {
                     HStack {
                         

@@ -11,6 +11,12 @@ struct ChatView: View {
     @State private var messageText = ""
     @ObservedObject var viewModel = ChatViewModel()
 
+    private let user: User
+
+    init(user: User) {
+        self.user = user
+    }
+
     var body: some View {
         VStack {
             // messages
@@ -38,6 +44,7 @@ struct ChatView: View {
 
 struct ChatView_Previews: PreviewProvider {
     static var previews: some View {
-        ChatView()
+        let user = MOCK_USER
+        ChatView(user: user)
     }
 }
