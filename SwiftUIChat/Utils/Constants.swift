@@ -14,6 +14,8 @@ let MOCK_USER = User(id: "apdo9ifjqpowijefpoiawj", username: "Test", fullname: "
 
 
 // Message Class
+let MESSAGES_REFCENT_MESSAGES = "recent-messages"
+// Field
 let MESSAGES_TEXT = "text"
 let MESSAGES_FROMUSER = "fromUserId"
 let MESSAGES_TOUSER = "toUserId"
