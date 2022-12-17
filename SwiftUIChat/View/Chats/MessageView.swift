@@ -65,7 +65,7 @@ struct MessageView: View {
 
 struct MessageView_Previews: PreviewProvider {
     static var previews: some View {
-        let viewModel = MessageViewModel(message: Message(fromUserId: "aaa", toUserId: "bbb", isReaded: false, text: "test", createdAt: Timestamp(date: Date()), updatedAt: Timestamp(date: Date())))
+        let viewModel = MessageViewModel(Message(fromUserId: "aaa", toUserId: "bbb", isReaded: false, text: "test", createdAt: Timestamp(date: Date()), updatedAt: Timestamp(date: Date())))
         MessageView(viewModel: viewModel)
     }
 }
