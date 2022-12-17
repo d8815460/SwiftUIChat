@@ -58,8 +58,7 @@ struct ConversationCell: View {
 
 struct ConversationCell_Previews: PreviewProvider {
     static var previews: some View {
-        let message = Message(fromUserId: "aa", toUserId: "bbb", isReaded: false, text: "ccc", createdAt: Timestamp(date: Date()), updatedAt: Timestamp(date: Date()))
-        let viewModel = ConversationCellViewModel(message)
+        let viewModel = ConversationCellViewModel(MOCK_MESSAGE)
         ConversationCell(viewModel: viewModel)
     }
 }
