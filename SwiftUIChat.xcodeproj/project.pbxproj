@@ -138,6 +138,10 @@
 		23ACE1B4294D72B900B38B2C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ACE1B1294D72B900B38B2C /* User.swift */; };
 		23BF88BD294DC804008E1AFF /* ConversationCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BF88BC294DC804008E1AFF /* ConversationCellViewModel.swift */; };
 		23BF88C2294DD78B008E1AFF /* LivePricesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BF88C1294DD78B008E1AFF /* LivePricesView.swift */; };
+		23BF88C4294DDE83008E1AFF /* TopMoversView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BF88C3294DDE83008E1AFF /* TopMoversView.swift */; };
+		23BF88C6294DDF17008E1AFF /* TopMoversItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BF88C5294DDF17008E1AFF /* TopMoversItemView.swift */; };
+		23BF88C8294DE243008E1AFF /* AllCoinsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BF88C7294DE243008E1AFF /* AllCoinsView.swift */; };
+		23BF88CA294DE24F008E1AFF /* CoinRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BF88C9294DE24F008E1AFF /* CoinRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -204,6 +208,10 @@
 		23ACE1B1294D72B900B38B2C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		23BF88BC294DC804008E1AFF /* ConversationCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationCellViewModel.swift; sourceTree = "<group>"; };
 		23BF88C1294DD78B008E1AFF /* LivePricesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivePricesView.swift; sourceTree = "<group>"; };
+		23BF88C3294DDE83008E1AFF /* TopMoversView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMoversView.swift; sourceTree = "<group>"; };
+		23BF88C5294DDF17008E1AFF /* TopMoversItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMoversItemView.swift; sourceTree = "<group>"; };
+		23BF88C7294DE243008E1AFF /* AllCoinsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCoinsView.swift; sourceTree = "<group>"; };
+		23BF88C9294DE24F008E1AFF /* CoinRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -443,6 +451,10 @@
 			isa = PBXGroup;
 			children = (
 				23BF88C1294DD78B008E1AFF /* LivePricesView.swift */,
+				23BF88C3294DDE83008E1AFF /* TopMoversView.swift */,
+				23BF88C5294DDF17008E1AFF /* TopMoversItemView.swift */,
+				23BF88C7294DE243008E1AFF /* AllCoinsView.swift */,
+				23BF88C9294DE24F008E1AFF /* CoinRowView.swift */,
 			);
 			path = LivePrices;
 			sourceTree = "<group>";
@@ -620,6 +632,7 @@
 				23ACE161294B81FF00B38B2C /* StatusSelectorView.swift in Sources */,
 				23ACE1B2294D72B900B38B2C /* User.swift in Sources */,
 				23ACE169294B872700B38B2C /* ImagePicker.swift in Sources */,
+				23BF88CA294DE24F008E1AFF /* CoinRowView.swift in Sources */,
 				23ACE11C294B6D8C00B38B2C /* LoginView.swift in Sources */,
 				23ACE128294B743C00B38B2C /* CustomTextField.swift in Sources */,
 				23ACE191294C2C4000B38B2C /* ChatViewModel.swift in Sources */,
@@ -641,6 +654,7 @@
 				231029E2294D7F4600A273CD /* Constants.swift in Sources */,
 				23ACE1AA294C3CFB00B38B2C /* ProfilePhotoSelectorView.swift in Sources */,
 				23ACE189294C275500B38B2C /* CustomInputView.swift in Sources */,
+				23BF88C6294DDF17008E1AFF /* TopMoversItemView.swift in Sources */,
 				231029E4294D9E5100A273CD /* MessageViewModel.swift in Sources */,
 				23ACE145294B777200B38B2C /* ConversationsView.swift in Sources */,
 				23BF88BD294DC804008E1AFF /* ConversationCellViewModel.swift in Sources */,
@@ -650,6 +664,8 @@
 				23ACE134294B771E00B38B2C /* ChatView.swift in Sources */,
 				23BF88C2294DD78B008E1AFF /* LivePricesView.swift in Sources */,
 				23ACE120294B6D9D00B38B2C /* RegistrationView.swift in Sources */,
+				23BF88C8294DE243008E1AFF /* AllCoinsView.swift in Sources */,
+				23BF88C4294DDE83008E1AFF /* TopMoversView.swift in Sources */,
 				23ACE12D294B75C200B38B2C /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
