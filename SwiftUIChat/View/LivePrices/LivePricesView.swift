@@ -8,19 +8,22 @@
 import SwiftUI
 
 struct LivePricesView: View {
+
+    @StateObject var viewModel = LivePricesViewModel()
+
     var body: some View {
-        NavigationView {
-            ScrollView(.vertical, showsIndicators: false) {
-                
-                // Top movers view
-                TopMoversView()
+        ZStack(alignment: .bottomTrailing) {
+            ScrollView {
+                VStack(alignment: .leading) {
+                    // Top movers view
+                    TopMoversView()
 
-                Divider()
+                    Divider()
 
-                // all coins view
-                AllCoinsView()
+                    // all coins view
+                    AllCoinsView()
+                }
             }
-            .navigationTitle("Live Prices")
         }
     }
 }

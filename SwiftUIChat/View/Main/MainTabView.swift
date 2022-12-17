@@ -15,19 +15,21 @@ struct MainTabView: View {
         if let user = viewModel.currentUser {
             NavigationView {
                 TabView(selection: $selectedIndex) {
-                    ConversationsView()
+                    LivePricesView()
                         .onTapGesture {
                             selectedIndex = 0
                         }
-                        .tabItem { Image(systemName: "bubble.left") }
+                        .tabItem { Image(systemName: "bitcoinsign.circle.fill") }
                         .tag(0)
-
-                    ChannelsView()
+                    
+                    ConversationsView()
                         .onTapGesture {
                             selectedIndex = 1
                         }
-                        .tabItem { Image(systemName: "bitcoinsign.circle.fill") }
+                        .tabItem { Image(systemName: "bubble.left") }
                         .tag(1)
+
+                    
 
                     SettingsView(user: user)
                         .onTapGesture {
@@ -45,16 +47,17 @@ struct MainTabView: View {
 
     var tabTitle: String {
         switch selectedIndex {
-        case 0: return "Chats"
-        case 1: return "Live Prices"
+        case 0: return "Live Prices"
+        case 1: return "Chats"
         case 2: return "Settings"
         default: return ""
         }
     }
 }
 
-struct MainTabView_Previews: PreviewProvider {
-    static var previews: some View {
-        MainTabView()
-    }
-}
+// Preview missing environment of type: AuthViewModel. To resolve this add .environmentObject(AuthViewModel(...)) to the appropriate preview.
+//struct MainTabView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MainTabView()
+//    }
+//}

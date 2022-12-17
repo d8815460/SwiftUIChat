@@ -142,6 +142,7 @@
 		23BF88C6294DDF17008E1AFF /* TopMoversItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BF88C5294DDF17008E1AFF /* TopMoversItemView.swift */; };
 		23BF88C8294DE243008E1AFF /* AllCoinsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BF88C7294DE243008E1AFF /* AllCoinsView.swift */; };
 		23BF88CA294DE24F008E1AFF /* CoinRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BF88C9294DE24F008E1AFF /* CoinRowView.swift */; };
+		23BF88CC294DE8AE008E1AFF /* LivePricesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BF88CB294DE8AE008E1AFF /* LivePricesViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -212,6 +213,7 @@
 		23BF88C5294DDF17008E1AFF /* TopMoversItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMoversItemView.swift; sourceTree = "<group>"; };
 		23BF88C7294DE243008E1AFF /* AllCoinsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCoinsView.swift; sourceTree = "<group>"; };
 		23BF88C9294DE24F008E1AFF /* CoinRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinRowView.swift; sourceTree = "<group>"; };
+		23BF88CB294DE8AE008E1AFF /* LivePricesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivePricesViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -363,6 +365,7 @@
 				231029E3294D9E5100A273CD /* MessageViewModel.swift */,
 				231029E5294DB75700A273CD /* ConversationsViewModel.swift */,
 				23BF88BC294DC804008E1AFF /* ConversationCellViewModel.swift */,
+				23BF88CB294DE8AE008E1AFF /* LivePricesViewModel.swift */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -663,6 +666,7 @@
 				23ACE1A6294C37AF00B38B2C /* AuthViewModel.swift in Sources */,
 				23ACE134294B771E00B38B2C /* ChatView.swift in Sources */,
 				23BF88C2294DD78B008E1AFF /* LivePricesView.swift in Sources */,
+				23BF88CC294DE8AE008E1AFF /* LivePricesViewModel.swift in Sources */,
 				23ACE120294B6D9D00B38B2C /* RegistrationView.swift in Sources */,
 				23BF88C8294DE243008E1AFF /* AllCoinsView.swift in Sources */,
 				23BF88C4294DDE83008E1AFF /* TopMoversView.swift in Sources */,
