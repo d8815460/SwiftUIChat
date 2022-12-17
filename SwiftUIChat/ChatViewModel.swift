@@ -24,12 +24,31 @@ class ChatViewModel: ObservableObject {
             let toUserId = user.id
         else { return }
 
-        let query = COLLECTION_MESSAGES.document(currentUid).collection(toUserId)
-        
+        let query = COLLECTION_MESSAGES
+            .document(currentUid)
+            .collection(toUserId)
+            .order(by: MESSAGES_CREATEDAT, descending: false)
+
+        query.addSnapshotListener { snapshot, error in
+            guard let changes = snapshot?.documentChanges.filter({ $0.type == .added }) else { return }
+            var messages = changes.compactMap{ try? $0.document.data(as: Message.self) }
+
+            for (index, message) in messages.enumerated() where message.fromUserId != currentUid {
+                messages[index].user = self.user
+            }
+
+            self.messages.append(contentsOf: messages)
+        }
+
         query.getDocuments { snapshot, error in
             guard let documents = snapshot?.documents else { return }
-            self.messages = documents.compactMap{ try? $0.data(as: Message.self) }
-            print(self.messages)
+            var messages = documents.compactMap{ try? $0.data(as: Message.self) }
+
+            for (index, message) in messages.enumerated() where message.fromUserId != currentUid {
+                messages[index].user = self.user
+            }
+
+            self.messages = messages
         }
     }
 

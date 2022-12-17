@@ -14,11 +14,20 @@ struct UserCell: View {
     var body: some View {
         VStack {
             HStack {
-                KFImage(URL(string: user.profileImageUrl ?? "venom-7"))
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 48, height: 48)
-                    .clipShape(Circle())
+                if let photoURL = user.profileImageUrl {
+                    KFImage(URL(string: photoURL))
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 48, height: 48)
+                        .clipShape(Circle())
+                } else {
+                    Image("venom-7")
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 48, height: 48)
+                        .clipShape(Circle())
+                        .padding(.leading)
+                }
                 
                 // message info
                 VStack(alignment: .leading, spacing: 4) {

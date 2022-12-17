@@ -17,4 +17,9 @@ struct MessageViewModel {
     var isFromCurrentUser: Bool {
         return message.fromUserId == currentUid
     }
+
+    var profileImageUrl: URL? {
+        guard let profileImageUrl = message.user?.profileImageUrl else { return nil }
+        return URL(string: profileImageUrl)
+    }
 }

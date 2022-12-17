@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Firebase
+import Kingfisher
 
 struct MessageView: View {
     let viewModel: MessageViewModel
@@ -30,11 +31,20 @@ struct MessageView: View {
 
                 HStack(alignment: .bottom) {
                     // 用戶大頭照
-                    Image("venom-7")
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: 32, height: 32)
-                        .clipShape(Circle())
+                    if let photoURL = viewModel.profileImageUrl{
+                        KFImage(photoURL)
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 32, height: 32)
+                            .clipShape(Circle())
+                    } else {
+                        Image("venom-7")
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 32, height: 32)
+                            .clipShape(Circle())
+                            .padding(.leading)
+                    }
                     // 對方發言
                     Text(viewModel.message.text)
                         .padding(12)
