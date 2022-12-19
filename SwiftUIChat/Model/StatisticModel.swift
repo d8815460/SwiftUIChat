@@ -1,0 +1,15 @@
+//
+//  StaticModel.swift
+//  SwiftUIChat
+//
+//  Created by Ayi on 2022/12/19.
+//
+
+import Foundation
+
+struct StatisticModel: Identifiable {
+    let id = UUID().uuidString
+    let title: String
+    let value: String
+    let percentageChange: Double?
+}

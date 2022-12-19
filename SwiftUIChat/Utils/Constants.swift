@@ -13,6 +13,7 @@ let COLLECTION_MESSAGES = Firestore.firestore().collection("messages")
 let MOCK_USER = User(id: "apdo9ifjqpowijefpoiawj", username: "Test", fullname: "Test", email: "test@gmail.com", profileImageUrl: nil)
 let MOCK_MESSAGE = Message(fromUserId: "aaa", toUserId: "bbb", isReaded: false, text: "test", createdAt: Timestamp(date: Date()), updatedAt: Timestamp(date: Date()))
 
+
 // Message Class
 let MESSAGES_REFCENT_MESSAGES = "recent-messages"
 // Field
