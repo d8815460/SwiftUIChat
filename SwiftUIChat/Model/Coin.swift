@@ -11,7 +11,8 @@ struct Coin: Codable, Identifiable {
     let id, symbol, name: String
     let image: String
     let currentPrice: Double
-    let marketCap, marketCapRank: Int
+    let marketCap: Double
+    let marketCapRank: Int
     let fullyDilutedValuation: Double?
     let totalVolume, high24H, low24H: Double?
     let priceChange24H, priceChangePercentage24H: Double

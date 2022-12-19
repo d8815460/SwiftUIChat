@@ -152,6 +152,10 @@
 		23BF88E4295059DA008E1AFF /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BF88E3295059DA008E1AFF /* PreviewProvider.swift */; };
 		23BF88E629505C31008E1AFF /* CoinDetailSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BF88E529505C31008E1AFF /* CoinDetailSectionModel.swift */; };
 		23BF88E8295064DE008E1AFF /* CoinDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BF88E7295064DE008E1AFF /* CoinDetailsViewModel.swift */; };
+		23BF88EA29506B44008E1AFF /* ChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BF88E929506B44008E1AFF /* ChartData.swift */; };
+		23BF88EC29506C4C008E1AFF /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BF88EB29506C4C008E1AFF /* Date.swift */; };
+		23BF88EE29506E69008E1AFF /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BF88ED29506E69008E1AFF /* ChartView.swift */; };
+		23BF88F02950776F008E1AFF /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BF88EF2950776F008E1AFF /* Double.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -232,6 +236,10 @@
 		23BF88E3295059DA008E1AFF /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
 		23BF88E529505C31008E1AFF /* CoinDetailSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailSectionModel.swift; sourceTree = "<group>"; };
 		23BF88E7295064DE008E1AFF /* CoinDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailsViewModel.swift; sourceTree = "<group>"; };
+		23BF88E929506B44008E1AFF /* ChartData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartData.swift; sourceTree = "<group>"; };
+		23BF88EB29506C4C008E1AFF /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		23BF88ED29506E69008E1AFF /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
+		23BF88EF2950776F008E1AFF /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -357,6 +365,7 @@
 				23BF88CD294DF4D0008E1AFF /* Coin.swift */,
 				23BF88E129505946008E1AFF /* StatisticModel.swift */,
 				23BF88E529505C31008E1AFF /* CoinDetailSectionModel.swift */,
+				23BF88E929506B44008E1AFF /* ChartData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -402,13 +411,15 @@
 		23ACE119294B6D4100B38B2C /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				23BF88E3295059DA008E1AFF /* PreviewProvider.swift */,
 				231029E1294D7F4600A273CD /* Constants.swift */,
 				23ACE127294B743C00B38B2C /* CustomTextField.swift */,
 				23ACE168294B872700B38B2C /* ImagePicker.swift */,
 				23ACE178294C18A200B38B2C /* SearchBar.swift */,
 				23ACE17C294C1B4300B38B2C /* Extensions.swift */,
 				23BF88DB295052B5008E1AFF /* Color.swift */,
-				23BF88E3295059DA008E1AFF /* PreviewProvider.swift */,
+				23BF88EB29506C4C008E1AFF /* Date.swift */,
+				23BF88EF2950776F008E1AFF /* Double.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -493,6 +504,7 @@
 				23BF88D729505174008E1AFF /* CoinDetailsView.swift */,
 				23BF88DD295056C7008E1AFF /* CoinDetailSection.swift */,
 				23BF88DF29505744008E1AFF /* StatisticView.swift */,
+				23BF88ED29506E69008E1AFF /* ChartView.swift */,
 			);
 			path = CoinDetails;
 			sourceTree = "<group>";
@@ -684,8 +696,10 @@
 				23ACE155294B7C7C00B38B2C /* SettingsCell.swift in Sources */,
 				231029E0294D7EE100A273CD /* NewMessageViewModel.swift in Sources */,
 				231029E6294DB75700A273CD /* ConversationsViewModel.swift in Sources */,
+				23BF88EC29506C4C008E1AFF /* Date.swift in Sources */,
 				23ACE185294C1D8B00B38B2C /* MessageView.swift in Sources */,
 				23ACE16D294C078600B38B2C /* ConversationCell.swift in Sources */,
+				23BF88EE29506E69008E1AFF /* ChartView.swift in Sources */,
 				23ACE14D294B77A800B38B2C /* ChannelsView.swift in Sources */,
 				23ACE1AE294C486E00B38B2C /* ImageUploader.swift in Sources */,
 				23ACE151294B7B3B00B38B2C /* SettingsHeaderView.swift in Sources */,
@@ -702,6 +716,7 @@
 				23ACE145294B777200B38B2C /* ConversationsView.swift in Sources */,
 				23BF88BD294DC804008E1AFF /* ConversationCellViewModel.swift in Sources */,
 				23BF88E629505C31008E1AFF /* CoinDetailSectionModel.swift in Sources */,
+				23BF88EA29506B44008E1AFF /* ChartData.swift in Sources */,
 				23ACE020294B696A00B38B2C /* SwiftUIChatApp.swift in Sources */,
 				23ACE149294B779B00B38B2C /* SettingsView.swift in Sources */,
 				23ACE1A6294C37AF00B38B2C /* AuthViewModel.swift in Sources */,
@@ -714,6 +729,7 @@
 				23BF88C4294DDE83008E1AFF /* TopMoversView.swift in Sources */,
 				23ACE12D294B75C200B38B2C /* MainTabView.swift in Sources */,
 				23BF88E8295064DE008E1AFF /* CoinDetailsViewModel.swift in Sources */,
+				23BF88F02950776F008E1AFF /* Double.swift in Sources */,
 				23BF88E029505744008E1AFF /* StatisticView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
