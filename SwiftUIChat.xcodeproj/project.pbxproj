@@ -145,6 +145,7 @@
 		23BF88CC294DE8AE008E1AFF /* LivePricesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BF88CB294DE8AE008E1AFF /* LivePricesViewModel.swift */; };
 		23BF88CE294DF4D0008E1AFF /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BF88CD294DF4D0008E1AFF /* Coin.swift */; };
 		23BF88D829505174008E1AFF /* CoinDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BF88D729505174008E1AFF /* CoinDetailsView.swift */; };
+		23BF88DC295052B5008E1AFF /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BF88DB295052B5008E1AFF /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -218,6 +219,7 @@
 		23BF88CB294DE8AE008E1AFF /* LivePricesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivePricesViewModel.swift; sourceTree = "<group>"; };
 		23BF88CD294DF4D0008E1AFF /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
 		23BF88D729505174008E1AFF /* CoinDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailsView.swift; sourceTree = "<group>"; };
+		23BF88DB295052B5008E1AFF /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -390,6 +392,7 @@
 				23ACE168294B872700B38B2C /* ImagePicker.swift */,
 				23ACE178294C18A200B38B2C /* SearchBar.swift */,
 				23ACE17C294C1B4300B38B2C /* Extensions.swift */,
+				23BF88DB295052B5008E1AFF /* Color.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -651,6 +654,7 @@
 				23ACE169294B872700B38B2C /* ImagePicker.swift in Sources */,
 				23BF88CA294DE24F008E1AFF /* CoinRowView.swift in Sources */,
 				23ACE11C294B6D8C00B38B2C /* LoginView.swift in Sources */,
+				23BF88DC295052B5008E1AFF /* Color.swift in Sources */,
 				23ACE128294B743C00B38B2C /* CustomTextField.swift in Sources */,
 				23ACE191294C2C4000B38B2C /* ChatViewModel.swift in Sources */,
 				23ACE159294B7DD100B38B2C /* SettingsCellViewModel.swift in Sources */,

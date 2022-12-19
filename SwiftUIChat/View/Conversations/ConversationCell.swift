@@ -35,12 +35,12 @@ struct ConversationCell: View {
                         VStack(alignment: .leading, spacing: 4) {
                             Text(viewModel.fullname)
                                 .font(.system(size: 14, weight: .semibold))
-                                .foregroundColor(Color(TEXTCOLOR))
+                                .foregroundColor(Color.theme.primaryTextColor)
                             
                             Text(viewModel.message.text)
                                 .font(.system(size: 15))
-                                .foregroundColor(Color(TEXTCOLOR))
-                        }.foregroundColor(.black)
+                                .foregroundColor(Color.theme.primaryTextColor)
+                        }.foregroundColor(Color.theme.blackColor)
                         
                         Spacer()
                         

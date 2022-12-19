@@ -23,7 +23,7 @@ struct MessageView: View {
                     .background(Color.blue)
                     .font(.system(size: 15))
                     .clipShape(ChatBubble(isFromCUrrentUser: true))
-                    .foregroundColor(.white)
+                    .foregroundColor(Color.theme.whiteColor)
                     .padding(.leading, 100)
                     .padding(.horizontal)
 
@@ -48,10 +48,10 @@ struct MessageView: View {
                     // 對方發言
                     Text(viewModel.message.text)
                         .padding(12)
-                        .background(Color(ITEMBACKGROUNDCOLOR))
+                        .background(Color.theme.itemBackgroundColor)
                         .font(.system(size: 15))
                         .clipShape(ChatBubble(isFromCUrrentUser: false))
-                        .foregroundColor(Color(TEXTCOLOR))
+                        .foregroundColor(Color.theme.primaryTextColor)
                 }
                 .padding(.horizontal)
                 .padding(.trailing, 80)

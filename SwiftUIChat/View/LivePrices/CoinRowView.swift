@@ -36,6 +36,7 @@ struct CoinRowView: View {
                     .font(.caption)
                     .padding(.leading, 6)
             }
+            .foregroundColor(Color.theme.primaryTextColor)
             .padding(.leading, 2)
 
             Spacer()

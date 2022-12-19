@@ -21,18 +21,18 @@ struct CustomInputView: View {
             HStack {
                 TextField("", text: $text)
                     .placeholder(when: text.isEmpty, placeholder: {
-                        Text("Message...").foregroundColor(Color(PLACEHOLDERCOLOR))
+                        Text("Message...").foregroundColor(Color.theme.placeHolderColor)
                     })
                     .textFieldStyle(PlainTextFieldStyle())
                     .font(.body)
                     .frame(minHeight: 30)
                     .padding(.leading, 8)
-                    .foregroundColor(Color(TEXTCOLOR))
+                    .foregroundColor(Color.theme.primaryTextColor)
 
                 Button(action: action, label: {
                     Text("Send")
                         .bold()
-                        .foregroundColor(Color(TEXTCOLOR))
+                        .foregroundColor(Color.theme.primaryTextColor)
                 })
                 .padding(.bottom, 8)
                 .padding(.horizontal)

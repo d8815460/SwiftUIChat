@@ -56,7 +56,7 @@ struct EditProfileView: View {
                         
                         Text("Enter your name or change your profile photo")
                             .font(.system(size: 16))
-                            .foregroundColor(.gray)
+                            .foregroundColor(Color.theme.grayTextColor)
                             .padding([.bottom, .horizontal])
                     }
                     
@@ -76,7 +76,7 @@ struct EditProfileView: View {
                     // status text
                     Text("Status")
                         .padding()
-                        .foregroundColor(.gray)
+                        .foregroundColor(Color.theme.grayTextColor)
                     // status
                     
                     NavigationLink(
@@ -88,7 +88,7 @@ struct EditProfileView: View {
                                 Spacer()
                                 
                                 Image(systemName: "chevron.right")
-                                    .foregroundColor(.gray)
+                                    .foregroundColor(Color.theme.grayTextColor)
                             }
                             .padding()
                             .background(Color.white)

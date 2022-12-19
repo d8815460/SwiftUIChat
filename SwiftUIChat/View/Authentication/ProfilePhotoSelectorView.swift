@@ -51,7 +51,7 @@ struct ProfilePhotoSelectorView: View {
                 }, label: {
                     Text("Continue")
                         .font(.headline)
-                        .foregroundColor(.white)
+                        .foregroundColor(Color.theme.whiteColor)
                         .frame(width: 340, height: 50)
                         .background(Color.blue)
                         .clipShape(Capsule())

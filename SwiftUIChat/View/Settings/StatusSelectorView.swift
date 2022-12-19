@@ -18,13 +18,13 @@ struct StatusSelectorView: View {
             ScrollView {
                 VStack(alignment: .leading) {
                     Text("CURRENTLY SET TO")
-                        .foregroundColor(.gray)
+                        .foregroundColor(Color.theme.grayTextColor)
                         .padding()
                     
                     StatusCell(status: viewModel.status)
 
                     Text("SELECT YOUR STATUS")
-                        .foregroundColor(.gray)
+                        .foregroundColor(Color.theme.grayTextColor)
                         .padding()
                     
                     // for loop with options
@@ -55,7 +55,7 @@ struct StatusCell: View {
     var body: some View {
         HStack {
             Text(status.title)
-                .foregroundColor(.black)
+                .foregroundColor(Color.theme.blackColor)
             Spacer()
         }
         .frame(height: 56)
