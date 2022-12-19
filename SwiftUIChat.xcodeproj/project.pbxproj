@@ -144,6 +144,7 @@
 		23BF88CA294DE24F008E1AFF /* CoinRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BF88C9294DE24F008E1AFF /* CoinRowView.swift */; };
 		23BF88CC294DE8AE008E1AFF /* LivePricesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BF88CB294DE8AE008E1AFF /* LivePricesViewModel.swift */; };
 		23BF88CE294DF4D0008E1AFF /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BF88CD294DF4D0008E1AFF /* Coin.swift */; };
+		23BF88D829505174008E1AFF /* CoinDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BF88D729505174008E1AFF /* CoinDetailsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -216,6 +217,7 @@
 		23BF88C9294DE24F008E1AFF /* CoinRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinRowView.swift; sourceTree = "<group>"; };
 		23BF88CB294DE8AE008E1AFF /* LivePricesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivePricesViewModel.swift; sourceTree = "<group>"; };
 		23BF88CD294DF4D0008E1AFF /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
+		23BF88D729505174008E1AFF /* CoinDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -346,11 +348,10 @@
 		23ACE116294B6D1500B38B2C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				23BF88BE294DD75A008E1AFF /* LivePrices */,
 				23ACE137294B772700B38B2C /* Conversations */,
-				23ACE132294B770600B38B2C /* Chats */,
 				23ACE131294B76FC00B38B2C /* Settings */,
 				23ACE130294B76F200B38B2C /* Channels */,
-				23BF88BE294DD75A008E1AFF /* LivePrices */,
 				23ACE12B294B75A200B38B2C /* Main */,
 				23ACE11A294B6D4F00B38B2C /* Authentication */,
 			);
@@ -445,6 +446,7 @@
 		23ACE137294B772700B38B2C /* Conversations */ = {
 			isa = PBXGroup;
 			children = (
+				23ACE132294B770600B38B2C /* Chats */,
 				23ACE144294B777200B38B2C /* ConversationsView.swift */,
 				23ACE16C294C078600B38B2C /* ConversationCell.swift */,
 				23ACE170294C07AA00B38B2C /* NewMessageView.swift */,
@@ -456,6 +458,7 @@
 		23BF88BE294DD75A008E1AFF /* LivePrices */ = {
 			isa = PBXGroup;
 			children = (
+				23BF88D62950515D008E1AFF /* CoinDetails */,
 				23BF88C1294DD78B008E1AFF /* LivePricesView.swift */,
 				23BF88C3294DDE83008E1AFF /* TopMoversView.swift */,
 				23BF88C5294DDF17008E1AFF /* TopMoversItemView.swift */,
@@ -463,6 +466,14 @@
 				23BF88C9294DE24F008E1AFF /* CoinRowView.swift */,
 			);
 			path = LivePrices;
+			sourceTree = "<group>";
+		};
+		23BF88D62950515D008E1AFF /* CoinDetails */ = {
+			isa = PBXGroup;
+			children = (
+				23BF88D729505174008E1AFF /* CoinDetailsView.swift */,
+			);
+			path = CoinDetails;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -662,6 +673,7 @@
 				23ACE189294C275500B38B2C /* CustomInputView.swift in Sources */,
 				23BF88C6294DDF17008E1AFF /* TopMoversItemView.swift in Sources */,
 				231029E4294D9E5100A273CD /* MessageViewModel.swift in Sources */,
+				23BF88D829505174008E1AFF /* CoinDetailsView.swift in Sources */,
 				23ACE145294B777200B38B2C /* ConversationsView.swift in Sources */,
 				23BF88BD294DC804008E1AFF /* ConversationCellViewModel.swift in Sources */,
 				23ACE020294B696A00B38B2C /* SwiftUIChatApp.swift in Sources */,
