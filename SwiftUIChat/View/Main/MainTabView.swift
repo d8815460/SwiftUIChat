@@ -13,32 +13,27 @@ struct MainTabView: View {
 
     var body: some View {
         if let user = viewModel.currentUser {
-            NavigationView {
-                TabView(selection: $selectedIndex) {
+            TabView(selection: $selectedIndex) {
+                NavigationView {
                     LivePricesView()
-                        .onTapGesture {
-                            selectedIndex = 0
-                        }
-                        .tabItem { Image(systemName: "bitcoinsign.circle.fill") }
-                        .tag(0)
-                    
-                    ConversationsView()
-                        .onTapGesture {
-                            selectedIndex = 1
-                        }
-                        .tabItem { Image(systemName: "bubble.left") }
-                        .tag(1)
-
-                    
-
-                    SettingsView(user: user)
-                        .onTapGesture {
-                            selectedIndex = 2
-                        }
-                        .tabItem { Image(systemName: "gear") }
-                        .tag(2)
+                        .navigationTitle(tabTitle)
                 }
-                .navigationTitle(tabTitle)
+                .tabItem { Image(systemName: "bitcoinsign.circle.fill") }
+                .tag(0)
+
+                NavigationView {
+                    ConversationsView()
+                        .navigationTitle(tabTitle)
+                }
+                .tabItem { Image(systemName: "bubble.left") }
+                .tag(1)
+
+                NavigationView {
+                    SettingsView(user: user)
+                        .navigationTitle(tabTitle)
+                }
+                .tabItem { Image(systemName: "gear") }
+                .tag(2)
             }
         } else {
             // show failed to load or empty state view
