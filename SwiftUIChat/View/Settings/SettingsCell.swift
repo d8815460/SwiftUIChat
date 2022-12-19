@@ -20,7 +20,7 @@ struct SettingsCell: View {
                     .frame(width: 22, height: 22)
                     .padding(6)
                     .background(viewModel.backgroundColor)
-                    .foregroundColor(.white)
+                    .foregroundColor(Color(WHITECOLOR))
                     .cornerRadius(6)
                 
                 Text(viewModel.title)
@@ -29,14 +29,14 @@ struct SettingsCell: View {
                 Spacer()
                                 
                 Image(systemName: "chevron.right")
-                    .foregroundColor(.gray)
+                    .foregroundColor(Color(TEXTGRAYCOLOR))
             }
             .padding([.top, .horizontal])
             
             Divider()
                 .padding(.leading)
         }
-        .background(Color.white)
+        .background(Color(WHITECOLOR))
     }
 }
 

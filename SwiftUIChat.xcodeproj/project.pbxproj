@@ -384,11 +384,11 @@
 		23ACE119294B6D4100B38B2C /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				231029E1294D7F4600A273CD /* Constants.swift */,
 				23ACE127294B743C00B38B2C /* CustomTextField.swift */,
 				23ACE168294B872700B38B2C /* ImagePicker.swift */,
 				23ACE178294C18A200B38B2C /* SearchBar.swift */,
 				23ACE17C294C1B4300B38B2C /* Extensions.swift */,
-				231029E1294D7F4600A273CD /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";

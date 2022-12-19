@@ -37,17 +37,17 @@ struct SettingsHeaderView: View {
             VStack(alignment: .leading, spacing: 4) {
                 Text(user.fullname)
                     .font(.system(size: 18))
-                    .foregroundColor(.black)
+                    .foregroundColor(Color(TEXTCOLOR))
 
                 Text("Available")
-                    .foregroundColor(.gray)
+                    .foregroundColor(Color(TEXTGRAYCOLOR))
                     .font(.system(size: 14))
             }
 
             Spacer()
         }
         .frame(height: 90)
-        .background(Color.white)
+        .background(Color(WHITECOLOR))
     }
 }
 

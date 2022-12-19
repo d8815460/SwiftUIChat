@@ -22,3 +22,11 @@ let MESSAGES_TOUSER = "toUserId"
 let MESSAGES_ISREADED = "isReaded"
 let MESSAGES_CREATEDAT = "createdAt"
 let MESSAGES_UPDATEDAT = "updatedAt"
+
+
+// Color Set
+let ITEMBACKGROUNDCOLOR = "ItemBackgroundColor"
+let TEXTCOLOR = "TextColor"
+let TEXTGRAYCOLOR = "TextGrayColor"
+let PLACEHOLDERCOLOR = "PlaceholderColor"
+let WHITECOLOR = "WhiteColor"

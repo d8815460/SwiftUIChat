@@ -48,10 +48,10 @@ struct MessageView: View {
                     // 對方發言
                     Text(viewModel.message.text)
                         .padding(12)
-                        .background(Color(.systemGray5))
+                        .background(Color(ITEMBACKGROUNDCOLOR))
                         .font(.system(size: 15))
                         .clipShape(ChatBubble(isFromCUrrentUser: false))
-                        .foregroundColor(.black)
+                        .foregroundColor(Color(TEXTCOLOR))
                 }
                 .padding(.horizontal)
                 .padding(.trailing, 80)
