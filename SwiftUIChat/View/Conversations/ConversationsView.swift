@@ -56,7 +56,7 @@ struct ConversationsView: View {
             })
         }
         .onAppear {
-//            viewModel.fetchRecentMessages()
+            viewModel.fetchRecentMessages()
         }
     }
 }

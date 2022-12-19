@@ -9,6 +9,9 @@ import SwiftUI
 
 class LivePricesViewModel: ObservableObject {
 
+    @Published var coins = [Coin]()
+    @Published var topMovingCoins = [Coin]()
+
     init() {
         fetchCoinData()
     }
@@ -29,9 +32,23 @@ class LivePricesViewModel: ObservableObject {
             }
 
             guard let data = data else { return }
-            let dataAsString = String(data: data, encoding: .utf8)
-            print("DEBUG: Data \(dataAsString)")
+
+            do {
+                let coins = try JSONDecoder().decode([Coin].self, from: data)
+                print("DEBUG: Coins \(coins)")
+                DispatchQueue.main.async {
+                    self.coins = coins
+                    self.configureTopMovingCoins()
+                }
+            } catch let error {
+                print("DEBUG: Failed to decode with error: \(error)")
+            }
             
         }.resume()
+    }
+
+    func configureTopMovingCoins() {
+        let topMovers = coins.sorted(by: { $0.priceChangePercentage24H > $1.priceChangePercentage24H })
+        self.topMovingCoins = Array(topMovers.prefix(5))
     }
 }

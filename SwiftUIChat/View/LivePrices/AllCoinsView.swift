@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct AllCoinsView: View {
+    @StateObject var viewModel = LivePricesViewModel()
     var body: some View {
         VStack(alignment: .leading) {
             Text("All Coins")
@@ -27,8 +28,8 @@ struct AllCoinsView: View {
             
             ScrollView {
                 VStack {
-                    ForEach(0 ..< 50, id: \.self) { _ in
-                        CoinRowView()
+                    ForEach(viewModel.coins) { coin in
+                        CoinRowView(coin: coin)
                     }
                 }
             }
@@ -37,8 +38,8 @@ struct AllCoinsView: View {
     }
 }
 
-struct AllCoinsView_Previews: PreviewProvider {
-    static var previews: some View {
-        AllCoinsView()
-    }
-}
+//struct AllCoinsView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        AllCoinsView()
+//    }
+//}

@@ -16,20 +16,20 @@ struct LivePricesView: View {
             ScrollView {
                 VStack(alignment: .leading) {
                     // Top movers view
-                    TopMoversView()
+                    TopMoversView(viewModel: viewModel)
 
                     Divider()
 
                     // all coins view
-                    AllCoinsView()
+                    AllCoinsView(viewModel: viewModel)
                 }
             }
         }
     }
 }
 
-struct LivePricesView_Previews: PreviewProvider {
-    static var previews: some View {
-        LivePricesView()
-    }
-}
+//struct LivePricesView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        LivePricesView()
+//    }
+//}

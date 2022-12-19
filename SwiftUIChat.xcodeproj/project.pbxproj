@@ -143,6 +143,7 @@
 		23BF88C8294DE243008E1AFF /* AllCoinsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BF88C7294DE243008E1AFF /* AllCoinsView.swift */; };
 		23BF88CA294DE24F008E1AFF /* CoinRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BF88C9294DE24F008E1AFF /* CoinRowView.swift */; };
 		23BF88CC294DE8AE008E1AFF /* LivePricesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BF88CB294DE8AE008E1AFF /* LivePricesViewModel.swift */; };
+		23BF88CE294DF4D0008E1AFF /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BF88CD294DF4D0008E1AFF /* Coin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -214,6 +215,7 @@
 		23BF88C7294DE243008E1AFF /* AllCoinsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCoinsView.swift; sourceTree = "<group>"; };
 		23BF88C9294DE24F008E1AFF /* CoinRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinRowView.swift; sourceTree = "<group>"; };
 		23BF88CB294DE8AE008E1AFF /* LivePricesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivePricesViewModel.swift; sourceTree = "<group>"; };
+		23BF88CD294DF4D0008E1AFF /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -336,6 +338,7 @@
 			children = (
 				23ACE18C294C2BC600B38B2C /* Message.swift */,
 				23ACE1B1294D72B900B38B2C /* User.swift */,
+				23BF88CD294DF4D0008E1AFF /* Coin.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -668,6 +671,7 @@
 				23BF88C2294DD78B008E1AFF /* LivePricesView.swift in Sources */,
 				23BF88CC294DE8AE008E1AFF /* LivePricesViewModel.swift in Sources */,
 				23ACE120294B6D9D00B38B2C /* RegistrationView.swift in Sources */,
+				23BF88CE294DF4D0008E1AFF /* Coin.swift in Sources */,
 				23BF88C8294DE243008E1AFF /* AllCoinsView.swift in Sources */,
 				23BF88C4294DDE83008E1AFF /* TopMoversView.swift in Sources */,
 				23ACE12D294B75C200B38B2C /* MainTabView.swift in Sources */,
@@ -886,6 +890,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIChat/Preview Content\"";
 				DEVELOPMENT_TEAM = 2UHJYA9AH6;
 				ENABLE_PREVIEWS = YES;

@@ -22,27 +22,30 @@ struct SettingsView: View {
                 .ignoresSafeArea()
             
             VStack(spacing: 32) {
-                NavigationLink(
-                    destination: EditProfileView(),
-                    label: { SettingsHeaderView(user: user) })
-                
-                VStack(spacing: 1) {
-                    ForEach(SettingsCellViewModel.allCases, id: \.self) { viewModel in
-                        SettingsCell(viewModel: viewModel)
+
+                ScrollView {
+                    NavigationLink(
+                        destination: EditProfileView(),
+                        label: { SettingsHeaderView(user: user) })
+
+                    VStack(spacing: 1) {
+                        ForEach(SettingsCellViewModel.allCases, id: \.self) { viewModel in
+                            SettingsCell(viewModel: viewModel)
+                        }
                     }
+
+                    Button(action: {
+                        AuthViewModel.shared.signout()
+                    }, label: {
+                        Text("Log Out")
+                            .foregroundColor(.red)
+                            .font(.system(size: 16, weight: .semibold))
+                            .frame(width: UIScreen.main.bounds.width, height: 50)
+                            .background(Color.white)
+                    })
+
+                    Spacer()
                 }
-                
-                Button(action: {
-                    AuthViewModel.shared.signout()
-                }, label: {
-                    Text("Log Out")
-                        .foregroundColor(.red)
-                        .font(.system(size: 16, weight: .semibold))
-                        .frame(width: UIScreen.main.bounds.width, height: 50)
-                        .background(Color.white)
-                })
-                
-                Spacer()
             }
         }
     }
