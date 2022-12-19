@@ -19,5 +19,5 @@ struct ColorTheme {
     let whiteColor = Color(WHITECOLOR)
     let blackColor = Color(BLACKCOLOR)
     let placeHolderColor = Color(PLACEHOLDERCOLOR)
-    
+    let mainColor = Color(MAINCOLOR)
 }

@@ -15,17 +15,17 @@ struct MainTabView: View {
         if let user = viewModel.currentUser {
             TabView(selection: $selectedIndex) {
                 NavigationView {
-                    LivePricesView()
-                        .navigationTitle(tabTitle)
-                }
-                .tabItem { Image(systemName: "bitcoinsign.circle.fill") }
-                .tag(0)
-
-                NavigationView {
                     ConversationsView()
                         .navigationTitle(tabTitle)
                 }
                 .tabItem { Image(systemName: "bubble.left") }
+                .tag(0)
+
+                NavigationView {
+                    LivePricesView()
+                        .navigationTitle(tabTitle)
+                }
+                .tabItem { Image(systemName: "bitcoinsign") }
                 .tag(1)
 
                 NavigationView {
@@ -35,6 +35,7 @@ struct MainTabView: View {
                 .tabItem { Image(systemName: "gear") }
                 .tag(2)
             }
+            .accentColor(Color.theme.mainColor)
         } else {
             // show failed to load or empty state view
         }
@@ -42,8 +43,8 @@ struct MainTabView: View {
 
     var tabTitle: String {
         switch selectedIndex {
-        case 0: return "Live Prices"
-        case 1: return "Chats"
+        case 0: return "Chats"
+        case 1: return "Live Prices"
         case 2: return "Settings"
         default: return ""
         }

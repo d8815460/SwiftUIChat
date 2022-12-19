@@ -33,7 +33,7 @@ struct RegistrationView: View {
                 Text("Create your account.")
                     .font(.largeTitle)
                     .bold()
-                    .foregroundColor(.blue)
+                    .foregroundColor(Color.theme.mainColor)
     
                 VStack(spacing: 40) {
                     CustomTextField(imageName: "envelope",
@@ -67,7 +67,7 @@ struct RegistrationView: View {
                     .font(.headline)
                     .foregroundColor(Color.theme.whiteColor)
                     .frame(width: 340, height: 50)
-                    .background(Color.blue)
+                    .background(Color.theme.mainColor)
                     .clipShape(Capsule())
                     .padding()
             })

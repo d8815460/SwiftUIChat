@@ -16,7 +16,7 @@ struct CustomTextField: View {
     var body: some View {
         VStack(spacing: 16) {
             HStack {
-                Image(systemName: "envelope")
+                Image(systemName: imageName)
                     .resizable()
                     .scaledToFit()
                     .frame(width: 20, height: 20)

@@ -26,7 +26,7 @@ struct LoginView: View {
                     Text("Welcome Back")
                         .font(.largeTitle)
                         .bold()
-                        .foregroundColor(.blue)
+                        .foregroundColor(Color.theme.mainColor)
         
                     VStack(spacing: 40) {
                         CustomTextField(imageName: "envelope",
@@ -46,14 +46,14 @@ struct LoginView: View {
                 HStack {
                     Spacer()
                     
-                    NavigationLink(
-                        destination: Text("Reset password.."),
-                        label: {
-                            Text("Forgot Password?")
-                                .font(.system(size: 13, weight: .semibold))
-                                .padding(.top)
-                                .padding(.trailing, 28)
-                        })
+//                    NavigationLink(
+//                        destination: Text("Reset password.."),
+//                        label: {
+//                            Text("Forgot Password?")
+//                                .font(.system(size: 13, weight: .semibold))
+//                                .padding(.top)
+//                                .padding(.trailing, 28)
+//                        })
                 }
                 
                 Button(action: {
@@ -63,7 +63,7 @@ struct LoginView: View {
                         .font(.headline)
                         .foregroundColor(Color.theme.whiteColor)
                         .frame(width: 340, height: 50)
-                        .background(Color.blue)
+                        .background(Color.theme.mainColor)
                         .clipShape(Capsule())
                         .padding()
                 })

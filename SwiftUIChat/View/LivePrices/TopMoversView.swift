@@ -28,12 +28,11 @@ struct TopMoversView: View {
                 }
             }
         }
-        .padding()
     }
 }
 
-//struct TopMoversView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        TopMoversView(viewModel: LivePricesViewModel())
-//    }
-//}
+struct TopMoversView_Previews: PreviewProvider {
+    static var previews: some View {
+        TopMoversView(viewModel: LivePricesViewModel())
+    }
+}

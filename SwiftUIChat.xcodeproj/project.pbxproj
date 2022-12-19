@@ -156,6 +156,7 @@
 		23BF88EC29506C4C008E1AFF /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BF88EB29506C4C008E1AFF /* Date.swift */; };
 		23BF88EE29506E69008E1AFF /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BF88ED29506E69008E1AFF /* ChartView.swift */; };
 		23BF88F02950776F008E1AFF /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BF88EF2950776F008E1AFF /* Double.swift */; };
+		23BF88F229508C0F008E1AFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23BF88F129508C0F008E1AFF /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -240,6 +241,7 @@
 		23BF88EB29506C4C008E1AFF /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		23BF88ED29506E69008E1AFF /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 		23BF88EF2950776F008E1AFF /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		23BF88F129508C0F008E1AFF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -326,6 +328,7 @@
 				23ACE01F294B696A00B38B2C /* SwiftUIChatApp.swift */,
 				23ACE021294B696A00B38B2C /* ContentView.swift */,
 				23ACE023294B696B00B38B2C /* Assets.xcassets */,
+				23BF88F129508C0F008E1AFF /* LaunchScreen.storyboard */,
 				23ACE194294C34AF00B38B2C /* GoogleService-Info.plist */,
 				23ACE025294B696B00B38B2C /* Preview Content */,
 			);
@@ -648,6 +651,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				23ACE027294B696B00B38B2C /* Preview Assets.xcassets in Resources */,
+				23BF88F229508C0F008E1AFF /* LaunchScreen.storyboard in Resources */,
 				23ACE024294B696B00B38B2C /* Assets.xcassets in Resources */,
 				23ACE195294C34AF00B38B2C /* GoogleService-Info.plist in Resources */,
 			);
@@ -951,11 +955,13 @@
 				DEVELOPMENT_TEAM = 2UHJYA9AH6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Finance Chat";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -980,11 +986,13 @@
 				DEVELOPMENT_TEAM = 2UHJYA9AH6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Finance Chat";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

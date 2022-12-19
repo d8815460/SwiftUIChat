@@ -35,7 +35,7 @@ struct ProfilePhotoSelectorView: View {
                         .frame(width: 180, height: 180)
                         .clipped()
                         .padding(.top, 44)
-                        .foregroundColor(.blue)
+                        .foregroundColor(Color.theme.mainColor)
                 }
             })
             .sheet(isPresented: $imagePickerPresented, onDismiss: loadImage, content: {
@@ -53,7 +53,7 @@ struct ProfilePhotoSelectorView: View {
                         .font(.headline)
                         .foregroundColor(Color.theme.whiteColor)
                         .frame(width: 340, height: 50)
-                        .background(Color.blue)
+                        .background(Color.theme.mainColor)
                         .clipShape(Capsule())
                         .padding()
                 })

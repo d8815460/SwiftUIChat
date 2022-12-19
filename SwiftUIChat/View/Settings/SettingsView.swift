@@ -28,11 +28,11 @@ struct SettingsView: View {
                         destination: EditProfileView(),
                         label: { SettingsHeaderView(user: user) })
 
-                    VStack(spacing: 1) {
-                        ForEach(SettingsCellViewModel.allCases, id: \.self) { viewModel in
-                            SettingsCell(viewModel: viewModel)
-                        }
-                    }
+//                    VStack(spacing: 1) {
+//                        ForEach(SettingsCellViewModel.allCases, id: \.self) { viewModel in
+//                            SettingsCell(viewModel: viewModel)
+//                        }
+//                    }
 
                     Button(action: {
                         AuthViewModel.shared.signout()
