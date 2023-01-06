@@ -15,41 +15,39 @@ struct MainTabView: View {
         if let user = viewModel.currentUser {
             TabView(selection: $selectedIndex) {
                 NavigationView {
-                    ConversationsView()
-                        .navigationTitle(tabTitle)
-                }
-                .tabItem { Image(systemName: "bubble.left") }
-                .tag(0)
-
-                NavigationView {
                     FeedView()
                         .navigationTitle(tabTitle)
                 }
                 .tabItem { Image(systemName: "house") }
+                .tag(0)
+
+                NavigationView {
+                    ConversationsView()
+                        .navigationTitle(tabTitle)
+                }
+                .tabItem { Image(systemName: "bubble.left") }
                 .tag(1)
 
                 NavigationView {
-                    ChannelsView()
+                    UploadPostView()
                         .navigationTitle(tabTitle)
-//                    UploadPostView()
-//                        .navigationTitle(tabTitle)
                 }
-                .tabItem { Image(systemName: "bitcoinsign") }
+                .tabItem { Image(systemName: "plus.circle.fill") }
                 .tag(2)
 
-                NavigationView {
-                    NotificationView()
-                        .navigationTitle(tabTitle)
-                }
-                .tabItem { Image(systemName: "bitcoinsign") }
-                .tag(3)
+//                NavigationView {
+//                    NotificationView()
+//                        .navigationTitle(tabTitle)
+//                }
+//                .tabItem { Image(systemName: "bitcoinsign") }
+//                .tag(3)
 
                 NavigationView {
                     SettingsView(user: user)
                         .navigationTitle(tabTitle)
                 }
                 .tabItem { Image(systemName: "gear") }
-                .tag(4)
+                .tag(3)
             }
             .accentColor(Color.theme.mainColor)
         } else {
@@ -59,11 +57,11 @@ struct MainTabView: View {
 
     var tabTitle: String {
         switch selectedIndex {
-        case 0: return "Chats"
-        case 1: return "Feed"
+        case 0: return "Feed"
+        case 1: return "Chats"
         case 2: return "Post"
-        case 3: return "Notification"
-        case 4: return "Settings"
+//        case 3: return "Notification"
+        case 3: return "Settings"
         default: return ""
         }
     }

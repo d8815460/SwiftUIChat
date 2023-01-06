@@ -100,7 +100,7 @@ class AuthViewModel: NSObject, ObservableObject {
             }
             guard let user = try? snapshot?.data(as: User.self) else { return }
             print("get user data: \(user)")
-            self.currentUser = user as? User
+            self.currentUser = user
         }
     }
 }

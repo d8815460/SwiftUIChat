@@ -21,12 +21,23 @@ struct FeedCell: View {
         VStack(alignment: .leading) {
             // user info
             HStack {
-                KFImage(URL(string: viewModel.post.ownerImageUrl))
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 36, height: 36)
-                    .clipped()
-                    .cornerRadius(18)
+                if let photoURL = viewModel.post.ownerImageUrl {
+                    if photoURL != "" {
+                        KFImage(URL(string: photoURL))
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 36, height: 36)
+                            .clipped()
+                            .cornerRadius(18)
+                    } else {
+                        Image("venom-7")
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 36, height: 36)
+                            .clipped()
+                            .cornerRadius(18)
+                    }
+                }
                 
                 Text(viewModel.post.ownerUsername)
                     .font(.system(size: 14, weight: .semibold))
