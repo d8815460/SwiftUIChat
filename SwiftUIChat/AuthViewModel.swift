@@ -59,7 +59,7 @@ class AuthViewModel: NSObject, ObservableObject {
 
     func uploadProfileImage(_ image: UIImage) {
         print("DEBUG: upload profile image from view model")
-        ImageUploader.uploadImage(image: image) { imageUrl in
+        ImageUploader.uploadImage(image: image, type: .profile) { imageUrl in
             guard
                 let currentUser = Auth.auth().currentUser
             else { return }
@@ -100,7 +100,7 @@ class AuthViewModel: NSObject, ObservableObject {
             }
             guard let user = try? snapshot?.data(as: User.self) else { return }
             print("get user data: \(user)")
-            self.currentUser = user
+            self.currentUser = user as? User
         }
     }
 }

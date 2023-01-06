@@ -8,7 +8,11 @@
 import Firebase
 
 let COLLECTION_USERS = Firestore.firestore().collection("users")
+let COLLECTION_FOLLOWERS = Firestore.firestore().collection("followers")
+let COLLECTION_FOLLOWING = Firestore.firestore().collection("following")
 let COLLECTION_MESSAGES = Firestore.firestore().collection("messages")
+let COLLECTION_POSTS = Firestore.firestore().collection("posts")
+let COLLECTION_NOTIFICATIONS = Firestore.firestore().collection("notifications")
 
 let MOCK_USER = User(id: "apdo9ifjqpowijefpoiawj", username: "Test", fullname: "Test", email: "test@gmail.com", profileImageUrl: nil)
 let MOCK_MESSAGE = Message(fromUserId: "aaa", toUserId: "bbb", isReaded: false, text: "test", createdAt: Timestamp(date: Date()), updatedAt: Timestamp(date: Date()))
