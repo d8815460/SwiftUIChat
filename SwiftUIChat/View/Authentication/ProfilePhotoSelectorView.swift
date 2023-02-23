@@ -15,10 +15,10 @@ struct ProfilePhotoSelectorView: View {
 
     var body: some View {
         VStack {
-            NavigationLink(
-                destination: MainTabView(),
-                isActive: $viewModel.didUploadPhoto,
-                label: { })
+//            NavigationLink(
+//                destination: MainTabView(),
+//                isActive: $viewModel.didUploadPhoto,
+//                label: { })
 
             Button(action: { imagePickerPresented.toggle() }, label: {
                 if let profileImage = profileImage {

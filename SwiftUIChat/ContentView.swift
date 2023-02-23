@@ -14,10 +14,12 @@ struct ContentView: View {
     var body: some View {
         if viewModel.userSession != nil  {
             // TODO: 如果沒有上傳照片，跳轉到 ProfilePhotoSelectorView
-            if viewModel.userSession?.photoURL != nil {
+            if viewModel.didUploadPhoto && viewModel.didAuthenticateUser {
                 MainTabView()
-            } else {
+            } else if viewModel.didAuthenticateUser {
                 ProfilePhotoSelectorView()
+            } else {
+                LoginView()
             }
         } else {
             LoginView()
